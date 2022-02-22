@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.huawei.mlkit.example">
+
+    <meta-data
+        android:name="com.huawei.hms.ml.DEPENDENCY"
+        android:value="object,ocr,face,label,icr,bcr,imgseg,translate,langdetect,skeleton,handkeypoint" />
+    <!-- add authorization of camera -->
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".voice.VoiceActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".language.LanguageActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.ImageActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".body.BodyActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".text.TextActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".voice.speechrtt.RealTimeTranscriptionActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".voice.sounddect.SoundDectActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".language.textembedding.TextEmbeddingAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".body.livenessdetection.LiveLivenessDetectionActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_liveness_detection"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".body.livenessdetection.LivenessCustomDetectionActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_liveness_detection"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".text.document.ImageDocumentAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.object.LiveObjectAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.landmark.ImageLandmarkAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".body.face.StillFaceAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.classification.ImageClassificationAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".text.text.ImageTextAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".body.face.LiveFaceAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".voice.translate.TranslatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.imgseg.ImageSegmentationLiveAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.imgseg.ImageSegmentationStillAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.imgseg.HairSegmentationStillAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.scenedetection.SenceDetectionLiveAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.scenedetection.SenceDetectionStillAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".voice.tts.TtsAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".voice.tts.TtsOnlineModeActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".voice.tts.TtsOfflineModeActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".voice.asr.AsrAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".voice.asr.AsrOnlineAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".voice.aft.AftAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".text.IDCard.IcrAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".text.IDCard.IcrVnAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".text.bankCard.BcrAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".text.bankCard.CustomActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".text.generalCard.GcrAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".body.skeleton.LiveSkeletonAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".body.skeleton.StillSkeletonAnalyseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".body.handkeypoint.LiveHandKeyPointAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".body.handkeypoint.StillHandKeyPointAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".custommodel.CustomModelActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.imagesuperresolution.ImageSuperResolutionActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.documentSkewCorrection.DocumentSkewCorrectionActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.textimagesuperresolution.TextImageSuperResolutionActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".text.form.FormRecognitionActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".image.productvisionsearch.ProductVisionSearchAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".body.face3d.Live3DFaceAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".body.face3d.Still3DFaceAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".body.faceverification.FaceVerificationActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".body.handgesture.LiveHandGestureAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".body.handgesture.StillHandGestureAnalyseActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChooseActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

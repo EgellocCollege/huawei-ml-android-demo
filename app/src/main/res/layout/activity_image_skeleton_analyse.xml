@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.huawei.mlkit.example.body.skeleton.StillSkeletonAnalyseActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp">
+        <ImageView
+            android:id="@+id/skeleton_previewPane"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/skeleton_image"
+            android:scaleType="fitStart"/>
+
+        <com.huawei.mlkit.example.camera.GraphicOverlay
+            android:id="@+id/skeleton_previewOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp">
+        <Button
+            android:id="@+id/normal_detect_sync"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@color/upsdk_white"
+            android:text="NORMAL_SYNC"
+            android:textColor="@color/emui_color_gray_7"/>
+        <Button
+            android:id="@+id/normal_detect_async"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/normal_detect_sync"
+            android:layout_marginStart="20dp"
+            android:background="@color/upsdk_white"
+            android:text="NORMAL_ASYNC"
+            android:textColor="@color/emui_color_gray_7"/>
+
+        <Button
+            android:id="@+id/yoga_detect_sync"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/upsdk_white"
+            android:layout_below="@id/normal_detect_sync"
+            android:text="YOGA_SYNC"
+            android:textColor="@color/emui_color_gray_7"/>
+        <Button
+            android:id="@+id/yoga_detect_async"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/yoga_detect_sync"
+            android:layout_below="@id/normal_detect_async"
+            android:layout_marginStart="20dp"
+            android:background="@color/upsdk_white"
+            android:text="YOGA_ASYNC"
+            android:textColor="@color/emui_color_gray_7"/>
+
+    </RelativeLayout>
+</RelativeLayout>

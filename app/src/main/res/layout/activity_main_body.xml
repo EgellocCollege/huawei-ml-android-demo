@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/top_layout_face"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_face_live"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:text="@string/live_face"
+                android:textSize="13sp"></Button>
+
+            <Button
+                android:id="@+id/btn_face_image"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:text="@string/image_face"
+                android:textSize="13sp"></Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/top_layout_skeleton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_skeleton_live"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:text="@string/live_skeleton"
+                android:textSize="13sp"></Button>
+
+            <Button
+                android:id="@+id/btn_skeleton_image"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:text="@string/image_skeleton"
+                android:textSize="13sp"></Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/top_layout_handkeypoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_handkeypoint_live"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:text="@string/live_hand"
+                android:textSize="13sp"></Button>
+
+            <Button
+                android:id="@+id/btn_handkeypoint_still"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:text="@string/image_hand"
+                android:textSize="13sp"></Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/top_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_gesture_live"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:text="@string/gesture_live"
+                android:textSize="13sp"></Button>
+
+            <Button
+                android:id="@+id/btn_gesture_still"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:text="@string/gesture_still"
+                android:textSize="13sp"></Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/top_layout_3dface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_3dface_live"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:text="@string/live_3dface"
+                android:textSize="13sp"></Button>
+
+            <Button
+                android:id="@+id/btn_3dface_image"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:text="@string/image_3dface"
+                android:textSize="13sp"></Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/top_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_liveness_detection"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:text="@string/liveness"
+                android:textSize="13sp"></Button>
+
+            <Button
+                android:id="@+id/btn_face_verification"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:text="@string/face_verification"
+                android:textSize="13sp"></Button>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.huawei.mlkit.example.body.handkeypoint.StillHandKeyPointAnalyseActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp">
+
+        <ImageView
+            android:id="@+id/handstill_previewPane"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="0dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/handkeypoint_image" />
+
+        <com.huawei.mlkit.example.camera.GraphicOverlay
+            android:id="@+id/handstill_previewOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/handstill_detect_sync"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@color/upsdk_white"
+            android:text="HandKey_SYNC"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/emui_color_gray_7" />
+
+        <Button
+            android:id="@+id/handstill_detect_async"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@color/upsdk_white"
+            android:text="HandKey_ASYNC"
+            android:textColor="@color/emui_color_gray_7" />
+
+    </LinearLayout>
+</RelativeLayout>

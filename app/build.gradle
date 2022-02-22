@@ -1,0 +1,191 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        // "Replace the app package name with your own app package name on AppGallery Connect (AGC).
+        //  Keep the same as the package_name in agconnect-services.json."
+        applicationId "com.huawei.mlkit.example"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 2
+        versionName "2.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        // Only 64-bit binary files are reserved. If you do not need to adapt to 32-bit mobile phones,
+        // delete this configuration.
+        // ndk.abiFilters 'arm64-v8a', 'x86_64'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    aaptOptions {
+        noCompress "ms", "mnn", "cambricon"
+        cruncherEnabled false
+        useNewCruncher false
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    implementation 'com.huawei.hms:ml-computer-vision-cloud:2.0.5.304'
+
+    // Face detection SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-face:2.0.5.300'
+    // Face detection model.
+    implementation 'com.huawei.hms:ml-computer-vision-face-emotion-model:2.0.5.300'
+    implementation 'com.huawei.hms:ml-computer-vision-face-feature-model:2.0.5.300'
+    implementation 'com.huawei.hms:ml-computer-vision-face-shape-point-model:2.0.5.300'
+    implementation 'com.huawei.hms:ml-computer-vision-face-3d-model:2.0.5.300'
+
+    // Skeleton detection SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-skeleton:2.0.4.300'
+    // Skeleton detection model.
+    implementation 'com.huawei.hms:ml-computer-vision-skeleton-model:2.0.4.300'
+    // Yoga detection model.
+    implementation 'com.huawei.hms:ml-computer-vision-yoga-model:2.0.4.300'
+
+    // Image segmentation SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-segmentation:2.2.0.300'
+    // Image segmentation model.
+    implementation 'com.huawei.hms:ml-computer-vision-image-segmentation-body-model:2.2.0.300'
+    implementation 'com.huawei.hms:ml-computer-vision-image-segmentation-multiclass-model:2.2.0.300'
+    implementation 'com.huawei.hms:ml-computer-vision-image-segmentation-hair-model:2.2.0.300'
+    // Image classification SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-classification:2.0.1.300'
+    // Image classification model.
+    implementation 'com.huawei.hms:ml-computer-vision-image-classification-model:2.0.1.300'
+
+    // Object detection and tracking SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-object:2.0.3.301'
+    // Object detection and tracking model.
+    implementation 'com.huawei.hms:ml-computer-vision-object-detection-model:2.0.3.301'
+
+    // Text recognition SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-ocr:2.0.5.301'
+    // Text recognition model.
+    implementation 'com.huawei.hms:ml-computer-vision-ocr-cn-model:2.0.5.301'
+    implementation 'com.huawei.hms:ml-computer-vision-ocr-jk-model:2.0.5.301'
+    implementation 'com.huawei.hms:ml-computer-vision-ocr-latin-model:2.0.5.301'
+
+    // Bank card recognition fullSDK.
+    implementation 'com.huawei.hms:ml-computer-card-bcr:2.0.3.302'
+
+    // ID card recognition fullSDK.
+    implementation 'com.huawei.hms:ml-computer-card-icr-cn:2.0.3.303'
+
+    // Vietnam ID card  fullSDK
+    implementation 'com.huawei.hms:ml-computer-card-icr-vn:2.1.0.301'
+
+    // General card recognition plugin.
+    implementation 'com.huawei.hms:ml-computer-card-gcr-plugin:2.0.1.301'
+
+    // Text to speech SDK.
+    implementation 'com.huawei.hms:ml-computer-voice-tts:2.2.0.300'
+    // Text to speech FullSDK.
+    implementation 'com.huawei.hms:ml-computer-voice-tts-model-eagle:2.2.0.300'
+    implementation 'com.huawei.hms:ml-computer-voice-tts-model-bee:2.2.0.300'
+
+
+    // Automatic speech recognition Long voice SDK.
+    implementation 'com.huawei.hms:ml-computer-voice-realtimetranscription:2.2.0.300'
+
+    // Automatic speech recognition SDK.
+    implementation 'com.huawei.hms:ml-computer-voice-asr:2.2.0.300'
+    // Automatic speech recognition plugin.
+    implementation 'com.huawei.hms:ml-computer-voice-asr-plugin:2.2.0.300'
+
+    // Audio file transcription SDK.
+    implementation 'com.huawei.hms:ml-computer-voice-aft:2.2.0.300'
+
+    // Language detection SDK.
+    implementation 'com.huawei.hms:ml-computer-language-detection:2.2.0.300'
+    // Language detection model.
+    implementation 'com.huawei.hms:ml-computer-language-detection-model:2.2.0.300'
+
+    // Text translation SDK.
+    implementation 'com.huawei.hms:ml-computer-translate:2.2.0.300'
+    // Text translation model.
+    implementation 'com.huawei.hms:ml-computer-translate-model:2.2.0.300'
+
+    // Handkeypoint SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-handkeypoint:2.1.0.300'
+    // Handkeypoint model.
+    implementation 'com.huawei.hms:ml-computer-vision-handkeypoint-model:2.1.0.300'
+    // Handgesture model.
+    implementation 'com.huawei.hms:ml-computer-vision-gesture-model:2.1.0.300'
+
+    // Liveness Detection SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-livenessdetection:2.2.0.300'
+
+    // Image super resolution SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-imagesuperresolution:2.0.4.300'
+    // Image super resolution model.
+    implementation 'com.huawei.hms:ml-computer-vision-imagesuperresolution-model:2.0.4.300'
+
+    // Text image super resolution SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-textimagesuperresolution:2.0.4.300'
+    // Text image super resolution model.
+    implementation 'com.huawei.hms:ml-computer-vision-textimagesuperresolution-model:2.0.4.300'
+
+    // Custom model sdk.
+    implementation 'com.huawei.hms:ml-computer-model-executor:2.1.0.301'
+    // Mindspore sdk.
+    implementation 'mindspore:mindspore-lite:5.0.5.300'
+
+    //Document skew correction SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-documentskew:2.1.0.300'
+    //Document skew correction model.
+    implementation 'com.huawei.hms:ml-computer-vision-documentskew-model:2.1.0.300'
+
+    // Scene detection SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-scenedetection:2.0.3.300'
+    // Scene detection model.
+    implementation 'com.huawei.hms:ml-computer-vision-scenedetection-model:2.0.3.300'
+
+    // Sound Dect sdk.
+    implementation 'com.huawei.hms:ml-speech-semantics-sounddect-sdk:2.1.0.300'
+    // Sound Dect model.
+    implementation 'com.huawei.hms:ml-speech-semantics-sounddect-model:2.1.0.300'
+
+    // Text Embedding SDK.
+    implementation 'com.huawei.hms:ml-nlp-textembedding:2.0.4.300'
+
+    // Form recognition SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-formrecognition-model:2.2.0.300'
+    // Form recognition model.
+    implementation 'com.huawei.hms:ml-computer-vision-formrecognition:2.2.0.300'
+
+    // Product search SDK.
+    implementation 'com.huawei.hms:ml-product-visual-search-plugin:2.0.3.300'
+
+    //faceVerification
+    implementation 'com.huawei.hms:ml-computer-vision-faceverify:2.2.0.300'
+    implementation 'com.huawei.hms:ml-computer-vision-faceverify-model:2.2.0.300'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+}
+apply plugin: 'com.huawei.agconnect'  // HUAWEI agconnect Gradle plugin
+
